@@ -113,8 +113,6 @@ const Card: React.FC<Props> = ({recipe, onVote, ...props}) => {
             {recipe.title}
           </Text>
           <Text
-            dangerouslySetInnerHTML={{__html: recipe.excerpt}}
-            fontSize="sm"
             style={
               {
                 display: "-webkit-box",
@@ -123,7 +121,9 @@ const Card: React.FC<Props> = ({recipe, onVote, ...props}) => {
                 overflow: "hidden",
               } as any
             }
-          />
+          >
+            {recipe.excerpt}
+          </Text>
         </Stack>
       </Stack>
     </motion.div>

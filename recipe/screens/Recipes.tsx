@@ -89,7 +89,7 @@ const RecipesScreen: React.FC<Props> = ({recipes}) => {
           </Button>
         </Stack>
       </Stack>
-      <Modal isOpen={isOpen} size="2xl" onClose={handleReset}>
+      <Modal isOpen={isOpen} size="2xl" onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Recetas matcheadas</ModalHeader>
@@ -124,8 +124,8 @@ const RecipesScreen: React.FC<Props> = ({recipes}) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="primary" onClick={handleReset}>
-              Volver a empezar
+            <Button colorScheme="primary" variant="ghost" onClick={onClose}>
+              Cerrar
             </Button>
           </ModalFooter>
         </ModalContent>
