@@ -84,6 +84,7 @@ const Card: React.FC<Props> = ({recipe, onVote, ...props}) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        padding: "1rem",
       }}
       whileTap={{scale: 1.1}}
       onDrag={getTrajectory}

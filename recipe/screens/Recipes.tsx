@@ -65,7 +65,7 @@ const RecipesScreen: React.FC<Props> = ({recipes}) => {
 
   return (
     <>
-      <Stack alignItems="center" height="100%">
+      <Stack alignItems="center" height="100%" spacing={0}>
         <Deck>
           {recipesStack.map((recipe, index) => (
             <Card
@@ -76,7 +76,7 @@ const RecipesScreen: React.FC<Props> = ({recipes}) => {
             />
           ))}
         </Deck>
-        <Stack direction="row" spacing={3}>
+        <Stack direction="row" paddingBottom={4} paddingX={4} spacing={3}>
           <Button colorScheme="primary" isDisabled={!Boolean(matches.length)} onClick={onOpen}>
             Ver selección
           </Button>
