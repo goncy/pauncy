@@ -6,7 +6,9 @@ import {Recipe, RawRecipe} from "./types";
 export default {
   list: async (): Promise<Recipe[]> => {
     return axios
-      .get<RawRecipe[]>("https://www.paulinacocina.net/wp-json/wp/v2/posts?categories=38")
+      .get<RawRecipe[]>(
+        "https://www.paulinacocina.net/wp-json/wp/v2/posts?categories=38&per_page=100",
+      )
       .then((response) => parseRecipes(response.data));
   },
   mock: {
