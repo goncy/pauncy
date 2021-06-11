@@ -10,13 +10,7 @@ interface Props {
 }
 
 const IndexRoute: React.FC<Props> = ({recipes}) => {
-  const [shuffled, setShuffled] = React.useState(recipes);
-
-  React.useEffect(() => {
-    setShuffled((items) => [...items].sort(() => 0.5 - Math.random()));
-  }, []);
-
-  return <RecipesScreen recipes={shuffled} />;
+  return <RecipesScreen recipes={recipes} />;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
