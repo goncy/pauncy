@@ -27,5 +27,5 @@ export interface Recipe {
   excerpt: string;
   title: string;
   thumbnail: string;
-  categories: string[];
+  category: string;
 }

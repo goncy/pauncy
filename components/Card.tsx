@@ -1,5 +1,5 @@
 import React, {useRef, useEffect, useState} from "react";
-import {Stack, Text, Box} from "@chakra-ui/react";
+import {Stack, Text, Box, Badge} from "@chakra-ui/react";
 import {motion, useMotionValue, useAnimation, MotionProps} from "framer-motion";
 
 import {Recipe} from "../recipe/types";
@@ -109,7 +109,10 @@ const Card: React.FC<Props> = ({recipe, onVote, ...props}) => {
           height="100%"
         />
         <Stack marginTop="auto" padding={4}>
-          <Text fontSize="lg" fontWeight="bold">
+          <Badge alignSelf="flex-start" colorScheme="primary">
+            {recipe.category}
+          </Badge>
+          <Text fontSize="lg" fontWeight="bold" lineHeight="normal">
             {recipe.title}
           </Text>
           <Text
