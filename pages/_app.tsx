@@ -9,7 +9,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}) => {
   return (
     <>
       <Head>
-        <title>Promedios de salarios - Salancy</title>
+        <title>Recetas de Paulina Cocina</title>
         <meta content="initial-scale=1.0, width=device-width" name="viewport" />
         {/* Inicio de meta tags de licencia - Cambiar el contenido de los mismos viola el contenido de los terminos de licencia */}
         <meta content="goncy" name="author" />
