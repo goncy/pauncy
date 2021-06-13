@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const recipes = await api.list();
 
   return {
-    revalidate: 3600,
+    revalidate: 3600 * 24,
     props: {
       recipes,
     },

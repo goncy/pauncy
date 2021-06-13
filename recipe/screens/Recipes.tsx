@@ -67,10 +67,10 @@ const RecipesScreen: React.FC<Props> = ({recipes}) => {
     <>
       <Stack alignItems="center" height="100%" spacing={0}>
         <Deck>
-          {recipesStack.map((recipe, index) => (
+          {recipesStack.slice(-5).map((recipe, index, deck) => (
             <Card
               key={recipe.link}
-              drag={index === recipesStack.length - 1}
+              drag={index === deck.length - 1}
               recipe={recipe}
               onVote={handleVote}
             />

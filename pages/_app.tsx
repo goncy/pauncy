@@ -9,7 +9,7 @@ import {Recipe} from "../recipe/types";
 const App: React.FC<AppProps> = ({Component, pageProps}) => {
   const [shuffled, setShuffled] = React.useState<Recipe[]>([]);
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (pageProps.recipes) setShuffled([...pageProps.recipes].sort(() => 0.5 - Math.random()));
   }, [pageProps.recipes]);
 
